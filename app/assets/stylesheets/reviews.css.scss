@@ -1,0 +1,93 @@
+/* REVIEW INDEX CSS */
+#reviews-list-container a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#reviews-list-container .col-review-container {
+    height: 325px;
+    padding: 25px;
+}
+
+#reviews-list-container .review-item {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#reviews-list-container .review-item img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/*---------------------------------------------*/
+
+/* REVIEWS SHOW CSS */
+#review-show-container {
+    margin-top: 20px;
+}
+
+#review-show-container .review-header {
+    margin-bottom: 30px;
+}
+
+#review-show-container .review-header h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+#review-show-container .review-rating-section {
+    display: flex;
+}
+
+#review-show-container .review-rating-section .rating-star {
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+    background-color: orangered;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+#review-show-container .review-button {
+    background-color: orangered;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 8px 0px 8px;
+    margin-left: 5px;
+}
+
+#review-show-container .review-button a {
+    text-decoration: none;
+    color: white;
+}
+
+#review-show-container .reviewer-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#review-show-container .reviewer-icon i {
+    font-size: 30px;
+}
+
+
+#review-show-container .review-description h2 {
+    margin-bottom: 7px;
+}
+
+#review-show-container .review-description p {
+    font-size: 17px;
+}

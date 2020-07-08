@@ -1,0 +1,47 @@
+@import "bootstrap";
+@import "navigation_menu";
+@import "reviews";
+
+* {margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
+
+h1 {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 400;
+}
+
+#sign-up-container, #login-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sign-up-container h1, #login-container h1 {
+    margin-bottom: 10px;
+}
+
+#sign-up-container .user-form, #login-container .user-form {
+    width: 500px;
+}
+
+#login-container .bad-credentials {
+    margin-top: 20px;
+}

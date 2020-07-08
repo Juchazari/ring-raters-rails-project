@@ -1,0 +1,19 @@
+<div id="reviews-list-container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <% @reviews.each do |review| %>
+            <%= link_to review_path(review), class: "col col-review-container" do %>
+
+                <div class="review-item">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1516456712953-ba42cc070398?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80">
+                    </div>
+
+                    <div>
+                        <p><%= review.onion_ring.name %></p>
+                    </div>
+                </div>
+
+            <% end %>
+        <% end %>
+    </div>
+</div>

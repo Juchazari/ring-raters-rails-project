@@ -1,0 +1,23 @@
+<div id="login-container">
+    <div>
+        <h1>Your Onions await you!</h1>
+        <%= form_with url: sessions_path, class: "user-form" do |f| %>
+            <div class="form-group">
+                <%= f.label :email %><br>
+                <%= f.text_field :email, class: "form-control" %><br>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :password %><br>
+                <%= f.password_field :password, class: "form-control" %><br>
+            </div>
+
+            <%= f.submit "Login", class: "btn btn-primary"  %>
+        <% end %>
+        <% if alert %>
+            <div class="alert alert-danger bad-credentials" role="alert">
+                <%= alert %>
+            </div>
+        <% end %>
+    </div>
+</div>

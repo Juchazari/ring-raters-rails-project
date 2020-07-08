@@ -1,0 +1,2 @@
+class OnionRingsController < ApplicationController
+end

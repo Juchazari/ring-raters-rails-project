@@ -1,0 +1,12 @@
+<ul>
+  <% @restaurants.each do |res| %>
+    <li>
+      <%= res.name%>
+      <br>
+      <%= res.address%>
+
+    <a href= '{restaraunts?}/ <%= user.res.id %> '> <%= res.name %>
+
+    </li>
+    <br>
+  <% end %>
