@@ -1,0 +1,9 @@
+<h1><%= @restaurant.name %></h1>
+<p>Address: <%= @restaurant.address %></p>
+
+<h2>Onions</h2>
+<ul>
+    <% @restaurant.onion_rings.each do |onion_ring| %>
+        <li><%= link_to onion_ring.name, onion_ring_path(onion_ring) %></li>
+    <% end %>
+</ul>

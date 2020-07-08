@@ -1,5 +1,14 @@
 class UsersController < ApplicationController
 
+    def my_reviews
+        @user = User.find(params[:id])
+        if current_user == @user
+            render 'my_reviews'
+        else
+            redirect_to root_path
+        end
+    end
+
     def show
         @user = User.find(params[:id])
         if current_user == @user

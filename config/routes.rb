@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   get 'write-review/onion-ring/:id', to: 'reviews#new', as: 'write_onion_review'
+  get 'users/:id/my-reviews', to: 'users#my_reviews', as: 'user_reviews'
 end

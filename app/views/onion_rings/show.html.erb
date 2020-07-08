@@ -1,8 +1,16 @@
 <h1>Single Onion Ring</h1>
 <h3><%= @onion_ring.name %></h3><br>
-<ul>
+<ul> 
     <% @onion_ring.reviews.each do |review| %>
-        <li><%= review.description %></li>
+        <li>
+            <%= review.description %>
+            <% if current_user %>
+                <% if review.user.id == current_user.id%>
+                    <%= link_to "Edit", edit_review_path(review), class: "btn btn-primary" %>
+                <% end %>
+            <% end %>
+        </li>
+        
     <% end %>
 </ul>
 <%= link_to "Write a Review", write_onion_review_path(@onion_ring) %>
