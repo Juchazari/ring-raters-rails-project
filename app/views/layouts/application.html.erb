@@ -24,15 +24,19 @@
 
         <div class="nav-links">
           <ul>
-            <li><a href="#">Restaurants</a></li>
-            <li><%= link_to "Reviews", reviews_path %></li>
-            <li><a href="#">Onion Rings</a></li>
+            <li><%= link_to "Restaurants", restaurants_path %></li>
+            <li><%= link_to "Onion Rings", onion_rings_path %></li>
           </ul>
         </div>
 
         <div class="nav-login-signup">
           <% if current_user %>
             <ul>
+              <li>
+                <%= link_to user_path(current_user) do %>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                <% end %>
+              </li>
               <li><%= link_to "Log Out", logout_path %>
             </ul>
           <% else %>

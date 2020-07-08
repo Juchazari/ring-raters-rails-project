@@ -1,0 +1,22 @@
+<h1>Write A Review For this onion: <%= @onion_ring.name %></h1>
+<%= form_for @review do |f| %>
+
+    <% if @review.errors.any? %>
+        <ul>
+            <% @review.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    <% end %>
+
+    <input type="hidden" name="review[onion_ring_id]" value="<%= @onion_ring.id %>">
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :rating %>
+    <%= f.number_field :rating  %>
+
+    <%= f.submit %>
+
+<%end%>

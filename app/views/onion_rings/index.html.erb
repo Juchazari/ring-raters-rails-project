@@ -1,0 +1,6 @@
+<h1>All Onion Rings</h1>
+<ul>
+    <% @onion_rings.each do |onion| %>
+        <li><%= link_to onion.name, onion_ring_path(onion) %></li>
+    <%end%>
+</ul>

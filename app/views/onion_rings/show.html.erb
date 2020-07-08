@@ -1,0 +1,8 @@
+<h1>Single Onion Ring</h1>
+<h3><%= @onion_ring.name %></h3><br>
+<ul>
+    <% @onion_ring.reviews.each do |review| %>
+        <li><%= review.description %></li>
+    <% end %>
+</ul>
+<%= link_to "Write a Review", write_onion_review_path(@onion_ring) %>
