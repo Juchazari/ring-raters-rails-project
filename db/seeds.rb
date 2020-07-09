@@ -40,30 +40,39 @@ User.destroy_all
 @onion_res01 = OnionRestaurant.create(restaurant_id: @res1.id, onion_ring_id: @onion1.id)
 @onion_res02 = OnionRestaurant.create(restaurant_id: @res1.id, onion_ring_id: @onion2.id)
 @onion_res03 = OnionRestaurant.create(restaurant_id: @res1.id, onion_ring_id: @onion3.id)
+
 @onion_res04 = OnionRestaurant.create(restaurant_id: @res2.id, onion_ring_id: @onion4.id)
 @onion_res05 = OnionRestaurant.create(restaurant_id: @res2.id, onion_ring_id: @onion5.id)
 @onion_res06 = OnionRestaurant.create(restaurant_id: @res2.id, onion_ring_id: @onion6.id)
+
 @onion_res07 = OnionRestaurant.create(restaurant_id: @res3.id, onion_ring_id: @onion7.id)
 @onion_res08 = OnionRestaurant.create(restaurant_id: @res3.id, onion_ring_id: @onion8.id)
 @onion_res09 = OnionRestaurant.create(restaurant_id: @res3.id, onion_ring_id: @onion9.id)
+
 @onion_res10 = OnionRestaurant.create(restaurant_id: @res4.id, onion_ring_id: @onion10.id)
 @onion_res11 = OnionRestaurant.create(restaurant_id: @res4.id, onion_ring_id: @onion11.id)
 @onion_res12 = OnionRestaurant.create(restaurant_id: @res4.id, onion_ring_id: @onion12.id)
+
 @onion_res13 = OnionRestaurant.create(restaurant_id: @res5.id, onion_ring_id: @onion13.id)
 @onion_res14 = OnionRestaurant.create(restaurant_id: @res5.id, onion_ring_id: @onion14.id)
 @onion_res15 = OnionRestaurant.create(restaurant_id: @res5.id, onion_ring_id: @onion15.id)
+
 @onion_res16 = OnionRestaurant.create(restaurant_id: @res6.id, onion_ring_id: @onion16.id)
 @onion_res17 = OnionRestaurant.create(restaurant_id: @res6.id, onion_ring_id: @onion17.id)
 @onion_res18 = OnionRestaurant.create(restaurant_id: @res6.id, onion_ring_id: @onion18.id)
+
 @onion_res19 = OnionRestaurant.create(restaurant_id: @res7.id, onion_ring_id: @onion19.id)
 @onion_res20 = OnionRestaurant.create(restaurant_id: @res7.id, onion_ring_id: @onion20.id)
 @onion_res21 = OnionRestaurant.create(restaurant_id: @res7.id, onion_ring_id: @onion21.id)
+
 @onion_res22 = OnionRestaurant.create(restaurant_id: @res8.id, onion_ring_id: @onion22.id)
 @onion_res23 = OnionRestaurant.create(restaurant_id: @res8.id, onion_ring_id: @onion1.id)
 @onion_res24 = OnionRestaurant.create(restaurant_id: @res8.id, onion_ring_id: @onion2.id)
+
 @onion_res25 = OnionRestaurant.create(restaurant_id: @res9.id, onion_ring_id: @onion3.id)
 @onion_res26 = OnionRestaurant.create(restaurant_id: @res9.id, onion_ring_id: @onion4.id)
 @onion_res27 = OnionRestaurant.create(restaurant_id: @res9.id, onion_ring_id: @onion5.id)
+
 @onion_res28 = OnionRestaurant.create(restaurant_id: @res10.id, onion_ring_id: @onion6.id)
 @onion_res29 = OnionRestaurant.create(restaurant_id: @res10.id, onion_ring_id: @onion7.id)
 @onion_res30 = OnionRestaurant.create(restaurant_id: @res10.id, onion_ring_id: @onion8.id)
