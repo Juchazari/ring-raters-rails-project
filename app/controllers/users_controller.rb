@@ -1,18 +1,16 @@
 class UsersController < ApplicationController
 
-    def my_reviews
-        @user = User.find(params[:id])
-        if current_user == @user
-            render 'my_reviews'
+    def profile
+        if current_user
+            render 'profile'
         else
             redirect_to root_path
         end
     end
 
-    def show
-        @user = User.find(params[:id])
-        if current_user == @user
-            render 'show'
+    def reviews
+        if current_user
+            render 'reviews'
         else
             redirect_to root_path
         end
@@ -34,6 +32,15 @@ class UsersController < ApplicationController
             redirect_to root_url
         else
             render 'new'
+        end
+    end
+
+    def update
+        @user = User.find(params[:id])
+        if @user.update(user_params)
+            redirect_to user_profile_path, alert: "Successfully Updated!"
+        else
+            render 'show'
         end
     end
 

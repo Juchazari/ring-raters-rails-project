@@ -4,6 +4,6 @@
 <h2>Onions</h2>
 <ul>
     <% @restaurant.onion_rings.each do |onion_ring| %>
-        <li><%= link_to onion_ring.name, onion_ring_path(onion_ring) %></li>
+        <li><%= link_to onion_ring.name, restaurant_onion_ring_path(@restaurant, onion_ring) %></li>
     <% end %>
 </ul>

@@ -1,16 +1,48 @@
-<h1>Single Onion Ring</h1>
-<h3><%= @onion_ring.name %></h3><br>
-<ul> 
-    <% @onion_ring.reviews.each do |review| %>
-        <li>
-            <%= review.description %>
-            <% if current_user %>
-                <% if review.user.id == current_user.id%>
-                    <%= link_to "Edit", edit_review_path(review), class: "btn btn-primary" %>
-                <% end %>
+<div id="review-show-container">
+
+    <div class="review-header">
+
+        <h1><%= @onion_ring.name %></h1>
+
+        <div class="review-rating-section">
+            <% rand(1..5).times do %>
+                <div class="rating-star">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
             <% end %>
-        </li>
-        
-    <% end %>
-</ul>
-<%= link_to "Write a Review", write_onion_review_path(@onion_ring) %>
+            <div>
+                <button class="review-button"><%= link_to "Write a Review", new_onion_ring_review_path(@onion_ring) %></button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="review-content">
+
+        <% @onion_ring.reviews.each do |review| %>
+            <div class="review-description">
+
+                <p><i class="fa fa-user" aria-hidden="true"></i> <%= review.user.name %></p>
+
+                <div class="review-rating-section">
+                    <% review.rating.times do %>
+                        <div class="rating-star-small">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    <% end %>
+                </div>
+
+                <p><%= review.description %></p>
+
+                <% if current_user %>
+                    <% if review.user.id == current_user.id%>
+                        <%= link_to "Edit Review", edit_onion_ring_review_path(review.onion_ring, review), class: "btn btn-primary" %>
+                    <% end %>
+                <% end %>
+
+            </div>
+        <% end %>
+
+    </div>
+
+</div>

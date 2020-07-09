@@ -1,5 +1,5 @@
 <h1>Edit Review</h1>
-<%= form_for @review do |f| %>
+<%= form_with model: @review, url: onion_ring_review_path do |f| %>
 
     <% if @review.errors.any? %>
         <ul>
@@ -15,6 +15,6 @@
     <%= f.label :rating %>
     <%= f.number_field :rating  %>
 
-    <%= f.submit %>
+    <%= f.submit "Update" %>
 
 <%end%>

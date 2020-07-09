@@ -1,0 +1,16 @@
+<div id="user-profile-container">
+    <div class="nav-body-wrapper">
+        <div class="user-profile-nav-left">
+            <%= render "profile_nav" %>
+        </div>
+        <div class="user-profile-body-right">
+            <div id="my-reviews-container">
+                <ul>
+                    <% current_user.reviews.each do |review| %>
+                        <li><%= review.description %></li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
