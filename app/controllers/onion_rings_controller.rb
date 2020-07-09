@@ -6,6 +6,7 @@ class OnionRingsController < ApplicationController
     end
 
     def show
+        @restaurant = Restaurant.find(params[:restaurant_id])
     end
 
     def new

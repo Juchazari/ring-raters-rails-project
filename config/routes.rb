@@ -10,6 +10,12 @@ Rails.application.routes.draw do
     resources :onion_rings, only: :show
   end
 
+  resources :restaurants do
+    resources :onion_rings do
+      resources :reviews, only: [:new, :create]
+    end
+  end
+
   resources :onion_rings do
     resources :reviews
   end

@@ -1,18 +1,28 @@
 <div id="restaurants-index-container">
-  <% @restaurants.each do |restaurant| %>
-    <div class="restaurant-item">
 
-      <div class="res-img">
-        <% if restaurant.img_path %>
-          <%= image_tag (restaurant.img_path) %>
+  <div class="row">
+
+    <% @restaurants.each do |restaurant| %>
+
+      <div class="col-6">
+
+        <%= link_to restaurant_path(restaurant), class: "restaurant-item" do %>
+
+          <div class="res-img">
+            <%= image_tag (restaurant.img_path) %>
+          </div>
+
+          <div class="restaurant-body">
+            <h5><%= restaurant.name %></h5>
+            <p><%= restaurant.address %></p>
+          </div>
+          
         <% end %>
+
       </div>
 
-      <div class="restaurant-body">
-        <h5><%= restaurant.name %></h5>
-        <p><%= restaurant.address %></p>
-      </div>
+    <% end %>
 
-    </div>
-  <% end %>
+  </div>
+
 </div>

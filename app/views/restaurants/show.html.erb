@@ -1,9 +1,27 @@
 <h1><%= @restaurant.name %></h1>
-<p>Address: <%= @restaurant.address %></p>
+<div id="res-show-onions-cont">
+    <div class="row">
 
-<h2>Onions</h2>
-<ul>
-    <% @restaurant.onion_rings.each do |onion_ring| %>
-        <li><%= link_to onion_ring.name, restaurant_onion_ring_path(@restaurant, onion_ring) %></li>
-    <% end %>
-</ul>
+        <% @restaurant.onion_rings.each do |onion_ring| %>
+
+            <div class="col-3">
+
+                <%= link_to restaurant_onion_ring_path(@restaurant, onion_ring) do %>
+                    <div class="onion-item">
+                        <div class="onion-img-cont">
+                            <%= image_tag (onion_ring.img_path) %>
+                        </div>
+
+                        <div class="onion-body-cont">
+                            <h5><%= onion_ring.name %></h5>
+                        </div>
+                    </div>
+
+                <% end %>
+
+            </div>
+
+        <% end %>
+
+    </div>
+</div>

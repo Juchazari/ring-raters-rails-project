@@ -1,5 +1,5 @@
 <h1>Write A Review For this onion: <%= @onion_ring.name %></h1>
-<%= form_with model: @review, url: onion_ring_reviews_path do |f| %>
+<%= form_with model: @review, url: restaurant_onion_ring_reviews_path do |f| %>
 
     <% if @review.errors.any? %>
         <ul>

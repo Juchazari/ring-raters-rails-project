@@ -49,26 +49,61 @@ h4 {
 
 /* Restaurants CSS */
 #restaurants-index-container {
-    margin-top: 25px;
+    margin-top: 30px;
+}
+
+#restaurants-index-container a{
+    text-decoration: none;
+    color: #202020;
 }
 
 .restaurant-item {
-    width: 600px;
+    height: 180px;
     display: flex;
-    border: 1px solid #e6e6e6;
-    border-radius: 5px;
-    margin-bottom: 15px;
     padding: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    margin-bottom: 30px;
 }
 
-.restaurant-item .res-img img{
-    width: 150px;
+.restaurant-item:hover {
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+.restaurant-item .res-img {
+    margin-right: 15px;
+}
+
+.restaurant-item .res-img img {
+    width: 170px;
+    height: 150px;
     border-radius: 5px;
     border: 1px solid #e6e6e6;
-    margin-right: 15px;
 }
 
 .restaurant-body p {
     font-size: 14px;
     color: grey;
+}
+
+
+/* Onion Ring CSS */
+#res-show-onions-cont {
+    margin-top: 30px;
+}
+
+.onion-img-cont {
+    height: 200px;
+    overflow: hidden;
+}
+
+.onion-item img {
+    width: 100%;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.onion-item {
+    height: 290px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
 }

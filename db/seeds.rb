@@ -3,16 +3,16 @@ OnionRing.destroy_all
 Review.destroy_all
 User.destroy_all
 
-@res1 = Restaurant.create(name: "Bernhard Group", address: "1010 West Houston", phone_number: "786-001-5555", img_path: "/assets/res_01.png")
-@res2 = Restaurant.create(name: "Blanda LCC", address: "2020 West Houston", phone_number: "786-002-5555", img_path: "/assets/res_02.png")
-@res3 = Restaurant.create(name: "Weimann-Torphy", address: "3030 West Houston", phone_number: "786-003-5555", img_path: "/assets/res_03.png")
-@res4 = Restaurant.create(name: "Daugherty, Mills and Johnston", address: "4040 West Houston", phone_number: "786-004-5555", img_path: "/assets/res_04.png")
-@res5 = Restaurant.create(name: "Sporer, Stracke and Gutmann", address: "5050 West Houston", phone_number: "786-005-5555", img_path: "/assets/res_05.png")
-@res6 = Restaurant.create(name: "Toy-Murazik", address: "6060 West Houston", phone_number: "786-006-5555", img_path: "/assets/res_06.png")
-@res7 = Restaurant.create(name: "Kessler-Zemlak", address: "7070 West Houston", phone_number: "786-007-5555", img_path: "/assets/res_07.png")
-@res8 = Restaurant.create(name: "Hirthe Inc", address: "8080 West Houston", phone_number: "786-008-5555", img_path: "/assets/res_08.png")
-@res9 = Restaurant.create(name: "Monahan-Heany", address: "9090 West Houston", phone_number: "786-009-5555", img_path: "/assets/res_09.png")
-@res10 = Restaurant.create(name: "Williamson-Barrows", address: "1111 West Houston", phone_number: "786-010-5555", img_path: "/assets/res_10.png")
+@res1 = Restaurant.create(name: "Nandita & her Onions", address: "1010 West Houston", phone_number: "786-001-5555", img_path: "/assets/res_01.png")
+@res2 = Restaurant.create(name: "Jodi's World of Onions", address: "2020 West Houston", phone_number: "786-002-5555", img_path: "/assets/res_02.png")
+@res3 = Restaurant.create(name: "Toby's Onion Club", address: "3030 West Houston", phone_number: "786-003-5555", img_path: "/assets/res_03.png")
+@res4 = Restaurant.create(name: "Julio's City Onion", address: "4040 West Houston", phone_number: "786-004-5555", img_path: "/assets/res_04.png")
+@res5 = Restaurant.create(name: "James Italian Onion Restaurant", address: "5050 West Houston", phone_number: "786-005-5555", img_path: "/assets/res_05.png")
+@res6 = Restaurant.create(name: "Frank's Onion Delight", address: "6060 West Houston", phone_number: "786-006-5555", img_path: "/assets/res_06.png")
+@res7 = Restaurant.create(name: "Spencer's Holly Onions", address: "7070 West Houston", phone_number: "786-007-5555", img_path: "/assets/res_07.png")
+@res8 = Restaurant.create(name: "Abel's Onions & Kolaches", address: "8080 West Houston", phone_number: "786-008-5555", img_path: "/assets/res_08.png")
+@res9 = Restaurant.create(name: "Antonio's Onion Kithcen", address: "9090 West Houston", phone_number: "786-009-5555", img_path: "/assets/res_09.png")
+@res10 = Restaurant.create(name: "Steven Onion Hotel & Bar", address: "1111 West Houston", phone_number: "786-010-5555", img_path: "/assets/res_10.png")
 
 @onion1 = OnionRing.create(name: "Skinny Onions", nutritional_facts: "Very skinny. 100 Calories", img_path: "/assets/onion_01.jpg")
 @onion2 = OnionRing.create(name: "Red Spicy Onion", nutritional_facts: "Very spicy. 200 Calories", img_path: "/assets/onion_02.jpg")
