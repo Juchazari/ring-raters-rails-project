@@ -39,4 +39,5 @@ class OnionRingsController < ApplicationController
         def find_onion_ring
             @onion_ring = OnionRing.find(params[:id])
         end
+        
 end
