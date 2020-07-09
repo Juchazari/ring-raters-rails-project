@@ -26,4 +26,6 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'users#profile', as: 'user_profile'
   get 'profile/my-reviews', to: 'users#reviews', as: 'user_reviews'
+
+
 end

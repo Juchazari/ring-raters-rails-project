@@ -1,6 +1,11 @@
 class ReviewsController < ApplicationController
     before_action :find_restaurant, :find_onion_ring, only: [:create]
 
+    def index
+        @reviews = Review.all
+        @onion_ring = OnionRing.find(params[:onion_ring_id])
+    end
+
     def show
         @review = Review.find(params[:id])
     end
