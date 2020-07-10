@@ -2,7 +2,13 @@
 
     <div class="onion-show-header">
         <div class="onion-img-container">
-            <%= image_tag (@onion_ring.img_path) %>
+            <div>
+                <%= image_tag (@onion_ring.img_path) %>
+            </div>
+            <div>
+                <h6>Nutritional Facts</h6>
+                <p class="onion-nutri-facts"><%= @onion_ring.nutritional_facts %></p>
+            </div>
         </div>
 
         <h1><%= @onion_ring.name %></h1>

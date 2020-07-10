@@ -13,7 +13,6 @@ h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
 h1 {
     font-family: 'Archivo Narrow', sans-serif;
     font-weight: 700;
-    color: #2b273c;
 }
 
 h2 {
@@ -45,22 +44,23 @@ h4 {
 }
 
 #home-banner-bg {
+    z-index: -1000;
     position: absolute;
     left: 0;
-    top: 70;
+    top: 0;
     background-image: url(https://i0.wp.com/www.thecannaschool.ca/wp-content/uploads/2019/12/Canva-Fried-onion-rings-scaled.jpg?fit=1500%2C1001&ssl=1%27);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 100vh;
 }
 
 #home-banner-bg-gradient {
     background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 #home-banner-bg .home-section-flex {

@@ -36,6 +36,14 @@
                 </div>
             <% end %>
 
+            <% if @user.errors.any? %>
+                <% @user.errors.full_messages.each do |msg| %>
+                    <div class="alert alert-danger enter-all-fields-msg" role="alert">
+                        <%= msg %>
+                    </div>
+                <% end %>
+            <% end %>
+
         <% end %>
     </div>
 </div>

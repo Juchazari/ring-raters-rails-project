@@ -105,6 +105,6 @@ User.destroy_all
 @review_18 = Review.create(description: "Magnificent!", rating: 5, onion_ring_id: @onion15.id, user_id: @user_02.id)
 @review_19 = Review.create(description: "Marvelous!", rating: 5, onion_ring_id: @onion16.id, user_id: @user_02.id)
 @review_20 = Review.create(description: "Their spicy sauce got me sweating like a sinner in church!", rating: 5, onion_ring_id: @onion17.id, user_id: @user_02.id)
-@review_21 = Review.create(description: "Their spicy onion had me sweating like a mouse in a cat part!", rating: 5, onion_ring_id: @onion18.id, user_id: @user_02.id)
+@review_21 = Review.create(description: "Their spicy onion had me sweating like a mouse in a cat party!", rating: 5, onion_ring_id: @onion18.id, user_id: @user_02.id)
 @review_22 = Review.create(description: "The owner was lovely, but the waiter was an asshole!", rating: 1, onion_ring_id: @onion20.id, user_id: @user_02.id)
 @review_23 = Review.create(description: "So tasty!", rating: 5, onion_ring_id: @onion21.id, user_id: @user_02.id)
