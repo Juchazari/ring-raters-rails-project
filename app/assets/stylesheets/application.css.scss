@@ -4,6 +4,8 @@
 @import "onion_rings";
 @import "reviews";
 @import "users";
+@import "signup";
+@import "login";
 
 * {margin:0;padding:0;}
 h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
@@ -32,23 +34,45 @@ h4 {
     color: #2b273c;
 }
 
-#sign-up-container, #login-container {
+.btn-primary {
+    background-color: #ff9000;
+    border-color: #ff9000;
+}
+
+.btn-primary:hover {
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+
+#home-banner-bg {
+    position: absolute;
+    left: 0;
+    top: 70;
+    background-image: url(https://i0.wp.com/www.thecannaschool.ca/wp-content/uploads/2019/12/Canva-Fried-onion-rings-scaled.jpg?fit=1500%2C1001&ssl=1%27);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+#home-banner-bg-gradient {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
     width: 100%;
     height: 100%;
-    padding-top: 50px;
+}
+
+#home-banner-bg .home-section-flex {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#sign-up-container h1, #login-container h1 {
-    margin-bottom: 10px;
-}
-
-#sign-up-container .user-form, #login-container .user-form {
-    width: 500px;
-}
-
-#login-container .bad-credentials {
-    margin-top: 20px;
+.home-section-flex h1 {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
 }

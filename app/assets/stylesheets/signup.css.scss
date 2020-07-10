@@ -1,20 +1,20 @@
-#new-review-form-container {
+#sign-up-container {
     width: 100%;
     height: 100%;
-    padding-top: 80px;
+    padding-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#new-review-form-container h1 {
+#sign-up-container h1 {
     margin-bottom: 10px;
 }
 
-#new-review-form-container .review-form {
+#sign-up-container .user-form {
     width: 500px;
 }
 
-#new-review-form-container .review-form-message {
+#sign-up-container .enter-all-fields-msg {
     margin-top: 20px;
 }

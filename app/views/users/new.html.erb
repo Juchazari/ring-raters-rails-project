@@ -29,6 +29,13 @@
             </div>
 
             <%= f.submit "Create Account", class: "btn btn-primary" %>
+
+            <% if alert %>
+                <div class="alert alert-danger enter-all-fields-msg" role="alert">
+                    <%= alert %>
+                </div>
+            <% end %>
+
         <% end %>
     </div>
 </div>

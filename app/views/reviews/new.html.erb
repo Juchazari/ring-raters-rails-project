@@ -1,20 +1,34 @@
-<h1>Write A Review For this onion: <%= @onion_ring.name %></h1>
-<%= form_with model: @review, url: restaurant_onion_ring_reviews_path do |f| %>
+<div id="new-review-form-container">
+    <div>
+        <h1><%= @onion_ring.name %> Review</h1>
+        <%= form_with model: @review, url: restaurant_onion_ring_reviews_path, class: "review-form" do |f| %>
 
-    <% if @review.errors.any? %>
-        <ul>
-            <% @review.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
+            <% if @review.errors.any? %>
+                <ul>
+                    <% @review.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                </ul>
             <% end %>
-        </ul>
-    <% end %>
 
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+            <div class="form-group">
+                <label for="review_rating">Example select</label>
+                <select class="form-control" name="review[rating]" id="review_rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
 
-    <%= f.label :rating %>
-    <%= f.number_field :rating  %>
+            <div class="form-group">
+                <%= f.label :description %>
+                <%= f.text_area :description, class: "form-control", rows: "10" %>
+            </div>
 
-    <%= f.submit "Submit"%>
+            <%= f.submit "Submit", class: "btn btn-primary" %>
 
-<%end%>
+        <%end%>
+    </div>
+</div>

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resources :users, except: [:index, :show, :destroy]
-  resources :reviews, except: [:index, :destroy]
+  resources :users, only: [:new, :create, :update]
+  resources :reviews, only: [:new, :create, :edit, :update]
   resources :restaurants, only: [:index, :show]
   resources :sessions, only: [:new, :create, :destroy]
 

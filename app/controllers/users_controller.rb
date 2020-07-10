@@ -31,7 +31,7 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to root_url
         else
-            render 'new'
+            redirect_to signup_path, alert: "Please enter in all fields!"
         end
     end
 

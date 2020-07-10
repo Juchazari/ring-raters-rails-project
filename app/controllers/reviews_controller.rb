@@ -1,19 +1,9 @@
 class ReviewsController < ApplicationController
-    before_action :find_restaurant, :find_onion_ring, only: [:create]
-
-    def index
-        @reviews = Review.all
-        @onion_ring = OnionRing.find(params[:onion_ring_id])
-    end
-
-    def show
-        @review = Review.find(params[:id])
-    end
 
     def new
         if current_user
-            @onion_ring = OnionRing.find(params[:onion_ring_id])
             @review = Review.new
+            @onion_ring = OnionRing.find(params[:onion_ring_id])
         else
             redirect_to login_path, alert: "Please Log in to write a review!"
         end
@@ -21,8 +11,12 @@ class ReviewsController < ApplicationController
 
     def create
         @review = Review.new(review_params)
+
         @review.user_id = current_user.id
         @review.onion_ring_id = params[:onion_ring_id]
+
+        @onion_ring = OnionRing.find(params[:onion_ring_id])
+        @restaurant = Restaurant.find(params[:restaurant_id])
 
         if @review.save
             redirect_to restaurant_onion_ring_path(@restaurant, @onion_ring)
@@ -57,11 +51,4 @@ class ReviewsController < ApplicationController
             params.require(:review).permit(:description, :rating)
         end
 
-        def find_restaurant
-            @restaurant = Restaurant.find(params[:restaurant_id])
-        end
-
-        def find_onion_ring
-            @onion_ring = OnionRing.find(params[:onion_ring_id])
-        end
 end

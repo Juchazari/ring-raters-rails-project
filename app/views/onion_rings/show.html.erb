@@ -5,12 +5,14 @@
         <h1><%= @onion_ring.name %></h1>
 
         <div class="onion-avg-rating-section">
+            <!--
             <% rand(1..5).times do %>
                 <div class="rating-star">
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             <% end %>
             <span>|</span>
+            -->
             <div>
                 <button class="review-button"><%= link_to "Write a Review", new_restaurant_onion_ring_review_path(@restaurant, @onion_ring) %></button>
             </div>
@@ -34,12 +36,6 @@
                 </div>
 
                 <p><%= review.description %></p>
-
-                <% if current_user %>
-                    <% if review.user.id == current_user.id%>
-                        <%= link_to "Edit Review", edit_onion_ring_review_path(review.onion_ring, review), class: "btn btn-primary" %>
-                    <% end %>
-                <% end %>
 
             </div>
         <% end %>

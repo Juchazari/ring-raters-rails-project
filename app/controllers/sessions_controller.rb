@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
     if current_user
       redirect_to root_path
@@ -19,4 +20,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url
   end
+
 end
