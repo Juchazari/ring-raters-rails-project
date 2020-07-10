@@ -1,1 +1,83 @@
-<h1>Hello World</h1>
+ <div id="onion-show-container">
+    <div id="onion-flexers-show-stuff">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="onion-show-header">
+                    <div class="onion-img-container">
+                        <%= image_tag (@onion_ring.img_path) %>
+                    </div>
+
+                    <h1><%= @onion_ring.name %></h1>
+
+                    <div class="onion-avg-rating-section">
+                        <% @onion_ring.avg_rating.round.times do %>
+                            <div class="rating-star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        <% end %>
+                        <p><%= @onion_ring.avg_rating.round(1) %></p>
+                        <div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="review-content">
+
+                    <% @onion_ring.reviews.each do |review| %>
+                        <div class="review-description">
+
+                            <p><i class="fa fa-user" aria-hidden="true"></i> <%= review.user.name %></p>
+
+                            <div class="onion-avg-rating-section">
+                                <% review.rating.times do %>
+                                    <div class="rating-star-small">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                <% end %>
+                            </div>
+
+                            <p><%= review.description %></p>
+
+                        </div>
+                    <% end %>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div id="restaurants-index-container">
+                    <div class="row">
+
+                        <% @onion_ring. restaurants.each do |restaurant| %>
+
+                            <div class="col-md-12">
+                                <%= link_to restaurant_path(restaurant), class: "restaurant-item" do %>
+                                    <div class="res-img">
+                                        <%= image_tag (restaurant.img_path) %>
+                                    </div>
+
+                                    <div class="restaurant-body">
+                                        <div class="res-info-head">
+                                        <h5><%= restaurant.name %></h5>
+                                        <p><%= restaurant.address %> | <%= restaurant.phone_number %></p>
+                                        </div>
+                                        <div class="res-review-text-cont">
+                                        <p>"<%= restaurant.onion_rings[0].reviews.sample.description %>"</p>
+                                        </div>
+                                    </div>
+                                <% end %>
+                            </div>
+
+                        <% end %>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    

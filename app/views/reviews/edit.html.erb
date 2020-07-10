@@ -1,20 +1,35 @@
-<h1>Edit Review</h1>
-<%= form_with model: @review, url: onion_ring_review_path do |f| %>
+<div id="new-review-form-container">
+    <div>
+        <h1>Edit Review</h1>
+        <%= form_with model: @review, url: review_path, class: "review-form" do |f| %>
 
-    <% if @review.errors.any? %>
-        <ul>
-            <% @review.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
+            <% if @review.errors.any? %>
+                <ul>
+                    <% @review.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                </ul>
             <% end %>
-        </ul>
-    <% end %>
 
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+            <div class="form-group">
+                <label for="review_rating">Rate your Rings!</label>
+                <select class="form-control" name="review[rating]" id="review_rating">
+                    <option value="<%= @review.rating %>" selected disabled hidden><%= @review.rating %></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
 
-    <%= f.label :rating %>
-    <%= f.number_field :rating  %>
+            <div class="form-group">
+                <%= f.label :description %>
+                <%= f.text_area :description, class: "form-control", rows: "10" %>
+            </div>
 
-    <%= f.submit "Update" %>
+            <%= f.submit "Submit", class: "btn btn-primary" %>
 
-<%end%>
+        <%end%>
+    </div>
+</div>

@@ -49,6 +49,10 @@
         padding: 10px 0px 0px 20px;
     }
 
+    .user-profile-body-right h6 {
+        margin: 0px 0px 20px 20px;
+    }
+
     .successful-update {
         margin-top: 20px;
     }
@@ -56,14 +60,18 @@
 
 #my-reviews-container {
     margin-left: 20px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
 }
 
-#my-reviews-container ul {
-    list-style: none;
+#my-reviews-container .my-reviews-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-#my-reviews-container ul li {
-    border-bottom: 1px solid lightgrey;
-    margin-bottom: 15px;
-    padding: 10px
+#my-reviews-container .my-reviews-buttons .btn-primary {
+    margin-right: 8px;
 }

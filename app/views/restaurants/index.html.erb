@@ -21,7 +21,7 @@
               <p><%= restaurant.address %> | <%= restaurant.phone_number %></p>
             </div>
             <div class="res-review-text-cont">
-              <p>"First time every trying out this place and let me tell you... I will never look anywhere else to get me my onion rings! The absolute best onion rings I have ever had, and I'm not an onion rings type of guy but ever since this visit.. woooowehhh!"</p>
+              <p>"<%= restaurant.onion_rings[0].reviews.sample.description %>"</p>
             </div>
           </div>
           

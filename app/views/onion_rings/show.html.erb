@@ -1,18 +1,19 @@
 <div id="onion-show-container">
 
     <div class="onion-show-header">
+        <div class="onion-img-container">
+            <%= image_tag (@onion_ring.img_path) %>
+        </div>
 
         <h1><%= @onion_ring.name %></h1>
 
         <div class="onion-avg-rating-section">
-            <!--
-            <% rand(1..5).times do %>
+            <% @onion_ring.avg_rating.round.times do %>
                 <div class="rating-star">
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             <% end %>
-            <span>|</span>
-            -->
+            <p><%= @onion_ring.avg_rating.round(1) %></p>
             <div>
                 <button class="review-button"><%= link_to "Write a Review", new_restaurant_onion_ring_review_path(@restaurant, @onion_ring) %></button>
             </div>
@@ -36,6 +37,14 @@
                 </div>
 
                 <p><%= review.description %></p>
+
+                <% if current_user %>
+                    <% current_user.reviews.each do |user_review| %>
+                        <% if user_review.id == review.id %>
+                            <button class="my-edit-button"><%= link_to "Edit", edit_restaurant_onion_ring_review_path(@restaurant, review.onion_ring, review) %></button>
+                        <% end %>
+                    <% end %>
+                <% end %>
 
             </div>
         <% end %>

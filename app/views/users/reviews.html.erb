@@ -4,13 +4,19 @@
             <%= render "profile_nav" %>
         </div>
         <div class="user-profile-body-right">
-            <div id="my-reviews-container">
-                <ul>
-                    <% current_user.reviews.each do |review| %>
-                        <li><%= review.description %></li>
-                    <% end %>
-                </ul>
-            </div>
+            <h6>Average Rating: <%= current_user.avg_rater %> | Total Ratings: <%= current_user.total_ratings %></h6>
+            <% current_user.reviews.each do |review| %>
+                <div id="my-reviews-container">
+                    <div class="my-reviews-description">
+                        <p>Rating: <%= review.rating %></p>
+                        <p><%= review.description %></p>
+                    </div>
+                    <div class="my-reviews-buttons">
+                        <button class="my-edit-button"><%= link_to "Edit", edit_review_path(review) %></button>
+                        <button class="my-delete-button"><%= link_to "Delete",  review_path(review), method: 'delete', data: {confirm: "Are you sure?"} %></button>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>

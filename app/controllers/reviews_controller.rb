@@ -1,5 +1,10 @@
 class ReviewsController < ApplicationController
 
+    def index
+        @onion_ring = OnionRing.find(params[:onion_ring_id])
+        @reviews = Review.all
+    end
+
     def new
         if current_user
             @review = Review.new
@@ -27,6 +32,7 @@ class ReviewsController < ApplicationController
 
     def edit
         if current_user
+            session[:return_to] ||= request.referer
             @review = Review.find(params[:id])
         else
             redirect_to root_path
@@ -35,13 +41,18 @@ class ReviewsController < ApplicationController
 
     def update
         @review = Review.find(params[:id])
-        @onion_ring = OnionRing.find(params[:onion_ring_id])
         
         if @review.update(review_params)
-            redirect_to onion_ring_path(@onion_ring)
+            redirect_to session.delete(:return_to)
         else
             render 'edit'
         end
+    end
+
+    def destroy
+        @review = Review.find(params[:id])
+        @review.destroy
+        redirect_to user_reviews_path
     end
 
 

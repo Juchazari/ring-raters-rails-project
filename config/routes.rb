@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :users, only: [:new, :create, :update]
-  resources :reviews, only: [:new, :create, :edit, :update]
+  resources :reviews, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :restaurants, only: [:index, :show]
   resources :sessions, only: [:new, :create, :destroy]
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :restaurants do
     resources :onion_rings do
-      resources :reviews, only: [:new, :create]
+      resources :reviews, only: [:new, :create, :edit, :update]
     end
   end
 

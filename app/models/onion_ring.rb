@@ -9,5 +9,13 @@ class OnionRing < ApplicationRecord
     end
 
     def avg_rating
+        review_sum = 0.0
+        self.reviews.each do |review|
+            review_sum += review.rating
+        end
+        if reviews_count > 0
+            return (review_sum / reviews_count.to_f)
+        end
+        review_sum
     end
 end
