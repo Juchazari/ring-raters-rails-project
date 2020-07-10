@@ -1,12 +1,16 @@
+<div id="restaurant-bg-banner" style="background-image: url(<%= @restaurant.img_path %>)">
+</div>
+
 <div id="res-show-onions-cont">
     <div class="show-res-name-cont">
         <h1><%= @restaurant.name %></h1>
+        <p><%= @restaurant.address %> | <%= @restaurant.phone_number %></p>
     </div>
     <div class="row">
 
         <% @restaurant.onion_rings.each do |onion_ring| %>
 
-            <div class="col-3">
+            <div class="col-lg-3">
 
                 <%= link_to restaurant_onion_ring_path(@restaurant, onion_ring) do %>
                     <div class="onion-item">
@@ -16,6 +20,7 @@
 
                         <div class="onion-body-cont">
                             <h5><%= onion_ring.name %></h5>
+                            <p><%= onion_ring.reviews_count %> reviews</p>
                         </div>
                     </div>
 

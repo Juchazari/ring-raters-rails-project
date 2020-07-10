@@ -1,15 +1,16 @@
-<div id="review-show-container">
+<div id="onion-show-container">
 
-    <div class="review-header">
+    <div class="onion-show-header">
 
         <h1><%= @onion_ring.name %></h1>
 
-        <div class="review-rating-section">
+        <div class="onion-avg-rating-section">
             <% rand(1..5).times do %>
                 <div class="rating-star">
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             <% end %>
+            <span>|</span>
             <div>
                 <button class="review-button"><%= link_to "Write a Review", new_restaurant_onion_ring_review_path(@restaurant, @onion_ring) %></button>
             </div>
@@ -24,7 +25,7 @@
 
                 <p><i class="fa fa-user" aria-hidden="true"></i> <%= review.user.name %></p>
 
-                <div class="review-rating-section">
+                <div class="onion-avg-rating-section">
                     <% review.rating.times do %>
                         <div class="rating-star-small">
                             <i class="fa fa-star" aria-hidden="true"></i>

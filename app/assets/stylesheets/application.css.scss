@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "navigation_menu";
 @import "restaurants";
+@import "onion_rings";
 @import "reviews";
 @import "users";
 
@@ -10,21 +11,25 @@ h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
 h1 {
     font-family: 'Archivo Narrow', sans-serif;
     font-weight: 700;
+    color: #2b273c;
 }
 
 h2 {
     font-family: 'Archivo Narrow', sans-serif;
     font-weight: 600;
+    color: #2b273c;
 }
 
 h3 {
     font-family: 'Archivo Narrow', sans-serif;
     font-weight: 500;
+    color: #2b273c;
 }
 
 h4 {
     font-family: 'Archivo Narrow', sans-serif;
     font-weight: 400;
+    color: #2b273c;
 }
 
 #sign-up-container, #login-container {

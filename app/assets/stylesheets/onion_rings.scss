@@ -1,3 +1,90 @@
-// Place all the styles related to the onion_rings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+/* REVIEWS SHOW CSS */
+#onion-show-container {
+    margin-top: 30px;
+}
+
+#onion-show-container .onion-show-header {
+    margin-bottom: 30px;
+}
+
+#onion-show-container .onion-show-header h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+#onion-show-container .onion-avg-rating-section {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#onion-show-container .rating-star {
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+#onion-show-container .rating-star-small {
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+}
+
+#onion-show-container .rating-star-small i {
+    font-size: 10px;
+}
+
+#onion-show-container .review-button {
+    background-color: #007bff;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 8px 0px 8px;
+    margin-left: 5px;
+}
+
+#onion-show-container .review-button a {
+    text-decoration: none;
+    color: white;
+}
+
+#onion-show-container .reviewer-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#onion-show-container .reviewer-icon i {
+    font-size: 30px;
+}
+
+
+#onion-show-container .review-description h2 {
+    margin-bottom: 7px;
+}
+
+#onion-show-container .review-description p {
+    font-size: 17px;
+}
+
+#onion-show-container .review-description {
+    width: 600px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 20px;
+}

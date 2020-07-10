@@ -79,15 +79,11 @@ User.destroy_all
 @onion_res29 = OnionRestaurant.create(restaurant_id: @res10.id, onion_ring_id: @onion7.id)
 @onion_res30 = OnionRestaurant.create(restaurant_id: @res10.id, onion_ring_id: @onion8.id)
 
+@user_09 = User.create(first_name: "Zelda", last_name: "Notsheik", email: "triforceWiz@hymail.com", password: "ledgendary")
+@user_10 = User.create(first_name: "Mario", last_name:"Itsame" , email: "MarioPHD@mushmail.com", password: "peach22")
+@user_11 = User.create(first_name: "Sanic", last_name: "TheHogBush", email: "gottagofast@speedmail.com", password: "R1nG5")
 
 @review_07 = Review.create(description:"Spencer's Holly Onions has a brilliant atmosphere for a good time out with friends. The color pallet is rustic greens, and browns, and the seating near the windows was extremely comfortable. Unfortunately, their secret sauce onion rings didnt quite live up to the hype. The rings were too oily, and the fabled sauce had an odd pungent smell. I'll give it three stars for a great interior, and some mediocre onion rings" , rating: 3 , onion_ring_id: @onion19.id, user_id: @user_09.id)
 @review_08 = Review.create(description: "the wrong type of rings. This was a huge disappointment. They were wayyyyy too salty, and when I asked the server for a new batch they spit in my eye. Dont know what a Kolach is but im never coming here again", rating: 1, onion_ring_id: @onion22.id, user_id: @user_11.id)
 @review_09 = Review.create(description: "Orange Onions! A novel concept! The sweetness of the oranges in the sauce, and the zest in the batter paired well with the spices, and the flavour of the onion, Antonio's Onion Kitchen hit this recipe out of the park!" , rating: 4, onion_ring_id: @onion3.id, user_id: @user_10.id)
 @review_10 = Review.create(description: "The Crunchy Bluw Onions certainly live up its name. The rings were extremely crunchy, and cooked to perfection. The blue cheese sauce that was paired with it elevated this dish. The Hotel/Bar was also an interesting find, and one that I'll be visiting later for sure!", rating: 5 , onion_ring_id: @onion7.id, user_id: @user_09.id)
-
-
-@user_09 = User.create(first_name: "Zelda", last_name: "Notsheik", email: "triforceWiz@hymail.com", password: "ledgendary")
-
-@user_10 = User.create(first_name: "Mario", last_name:"Itsame" , email: "MarioPHD@mushmail.com", password: "peach22")
-
-@user_11 = User.create(first_name: "Sanic", last_name: "TheHogBush", email: "gottagofast@speedmail.com", password: "R1nG5")
