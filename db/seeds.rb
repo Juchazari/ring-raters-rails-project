@@ -6,13 +6,15 @@ User.destroy_all
 @res1 = Restaurant.create(name: "Nandita & her Onions", address: "1010 West Houston", phone_number: "786-001-5555", img_path: "/assets/res_01.png")
 @res2 = Restaurant.create(name: "Jodi's World of Onions", address: "2020 West Houston", phone_number: "786-002-5555", img_path: "/assets/res_02.png")
 @res3 = Restaurant.create(name: "Toby's Onion Club", address: "3030 West Houston", phone_number: "786-003-5555", img_path: "/assets/res_03.png")
+
 @res4 = Restaurant.create(name: "Julio's City Onion", address: "4040 West Houston", phone_number: "786-004-5555", img_path: "/assets/res_04.png")
 @res5 = Restaurant.create(name: "James Italian Onion Restaurant", address: "5050 West Houston", phone_number: "786-005-5555", img_path: "/assets/res_05.png")
 @res6 = Restaurant.create(name: "Frank's Onion Delight", address: "6060 West Houston", phone_number: "786-006-5555", img_path: "/assets/res_06.png")
+
 @res7 = Restaurant.create(name: "Spencer's Holly Onions", address: "7070 West Houston", phone_number: "786-007-5555", img_path: "/assets/res_07.png")
 @res8 = Restaurant.create(name: "Abel's Onions & Kolaches", address: "8080 West Houston", phone_number: "786-008-5555", img_path: "/assets/res_08.png")
 @res9 = Restaurant.create(name: "Antonio's Onion Kithcen", address: "9090 West Houston", phone_number: "786-009-5555", img_path: "/assets/res_09.png")
-@res10 = Restaurant.create(name: "Steven Onion Hotel & Bar", address: "1111 West Houston", phone_number: "786-010-5555", img_path: "/assets/res_10.png")
+@res10 = Restaurant.create(name: "Steven's Onion Hotel & Bar", address: "1111 West Houston", phone_number: "786-010-5555", img_path: "/assets/res_10.png")
 
 @onion1 = OnionRing.create(name: "Skinny Onions", nutritional_facts: "Very skinny. 100 Calories", img_path: "/assets/onion_01.jpg")
 @onion2 = OnionRing.create(name: "Red Spicy Onion", nutritional_facts: "Very spicy. 200 Calories", img_path: "/assets/onion_02.jpg")
@@ -76,3 +78,16 @@ User.destroy_all
 @onion_res28 = OnionRestaurant.create(restaurant_id: @res10.id, onion_ring_id: @onion6.id)
 @onion_res29 = OnionRestaurant.create(restaurant_id: @res10.id, onion_ring_id: @onion7.id)
 @onion_res30 = OnionRestaurant.create(restaurant_id: @res10.id, onion_ring_id: @onion8.id)
+
+
+@review_07 = Review.create(description:"Spencer's Holly Onions has a brilliant atmosphere for a good time out with friends. The color pallet is rustic greens, and browns, and the seating near the windows was extremely comfortable. Unfortunately, their secret sauce onion rings didnt quite live up to the hype. The rings were too oily, and the fabled sauce had an odd pungent smell. I'll give it three stars for a great interior, and some mediocre onion rings" , rating: 3 , onion_ring_id: @onion19.id, user_id: @user_09.id)
+@review_08 = Review.create(description: "the wrong type of rings. This was a huge disappointment. They were wayyyyy too salty, and when I asked the server for a new batch they spit in my eye. Dont know what a Kolach is but im never coming here again", rating: 1, onion_ring_id: @onion22.id, user_id: @user_11.id)
+@review_09 = Review.create(description: "Orange Onions! A novel concept! The sweetness of the oranges in the sauce, and the zest in the batter paired well with the spices, and the flavour of the onion, Antonio's Onion Kitchen hit this recipe out of the park!" , rating: 4, onion_ring_id: @onion3.id, user_id: @user_10.id)
+@review_10 = Review.create(description: "The Crunchy Bluw Onions certainly live up its name. The rings were extremely crunchy, and cooked to perfection. The blue cheese sauce that was paired with it elevated this dish. The Hotel/Bar was also an interesting find, and one that I'll be visiting later for sure!", rating: 5 , onion_ring_id: @onion7.id, user_id: @user_09.id)
+
+
+@user_09 = User.create(first_name: "Zelda", last_name: "Notsheik", email: "triforceWiz@hymail.com", password: "ledgendary")
+
+@user_10 = User.create(first_name: "Mario", last_name:"Itsame" , email: "MarioPHD@mushmail.com", password: "peach22")
+
+@user_11 = User.create(first_name: "Sanic", last_name: "TheHogBush", email: "gottagofast@speedmail.com", password: "R1nG5")
