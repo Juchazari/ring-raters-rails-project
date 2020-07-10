@@ -1,0 +1,76 @@
+#restaurants-index-container {
+    margin-top: 30px;
+}
+
+#restaurants-index-container a{
+    text-decoration: none;
+    color: #202020;
+}
+
+#restaurants-index-container .index-title-header{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#restaurants-index-container .restaurant-item {
+    height: 180px;
+    display: flex;
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+#restaurants-index-container .restaurant-item:hover {
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+#restaurants-index-container .restaurant-item .res-img {
+    margin-right: 15px;
+}
+
+#restaurants-index-container .restaurant-item .res-img img {
+    width: 170px;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+}
+
+#restaurants-index-container .res-info-head {
+    margin-bottom: 10px;
+}
+
+#restaurants-index-container .restaurant-body p {
+    font-size: 14px;
+    color: grey;
+}
+
+#restaurants-index-container .res-review-text-cont p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+/* Onion Ring CSS */
+#res-show-onions-cont {
+    margin-top: 30px;
+}
+
+.onion-img-cont {
+    height: 200px;
+    overflow: hidden;
+}
+
+.onion-item img {
+    width: 100%;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.onion-item {
+    height: 290px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}

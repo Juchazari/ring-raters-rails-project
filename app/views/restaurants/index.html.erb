@@ -1,10 +1,13 @@
 <div id="restaurants-index-container">
+  <div class="index-title-header">
+    <h2>All Restaurants<h2>
+  </div>
 
   <div class="row">
 
     <% @restaurants.each do |restaurant| %>
 
-      <div class="col-6">
+      <div class="col-lg-6">
 
         <%= link_to restaurant_path(restaurant), class: "restaurant-item" do %>
 
@@ -13,8 +16,13 @@
           </div>
 
           <div class="restaurant-body">
-            <h5><%= restaurant.name %></h5>
-            <p><%= restaurant.address %></p>
+            <div class="res-info-head">
+              <h5><%= restaurant.name %></h5>
+              <p><%= restaurant.address %> | <%= restaurant.phone_number %></p>
+            </div>
+            <div class="res-review-text-cont">
+              <p>"First time every trying out this place and let me tell you... I will never look anywhere else to get me my onion rings! The absolute best onion rings I have ever had, and I'm not an onion rings type of guy but ever since this visit.. woooowehhh!"</p>
+            </div>
           </div>
           
         <% end %>

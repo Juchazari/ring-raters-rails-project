@@ -1,5 +1,7 @@
-<h1><%= @restaurant.name %></h1>
 <div id="res-show-onions-cont">
+    <div class="show-res-name-cont">
+        <h1><%= @restaurant.name %></h1>
+    </div>
     <div class="row">
 
         <% @restaurant.onion_rings.each do |onion_ring| %>
